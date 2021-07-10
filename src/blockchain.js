@@ -68,12 +68,15 @@ class Blockchain {
         return new Promise(async (resolve, reject) => {
            if(self.height > 0){
                 block.previousBlockHash = this.chain[this.chain.length - 1].hash;
-           }
-           block.time = new Date().getTime().toString().slice(0,-3);        
-           block.height = this.chain.length;
-           block.hash = SHA256(JSON.stringify(block));           
-           this.chain.push(block);
-           this.height = this.chain.length;
+            }
+            block.time = new Date().getTime().toString().slice(0,-3);        
+            block.height = this.chain.length;
+            block.hash = SHA256(JSON.stringify(block));
+                      
+            this.chain.push(block);
+            this.height = this.chain.length;
+           
+            return await self.validateChain();
         });
     }
 
@@ -204,14 +207,13 @@ class Blockchain {
         let self = this;
         let errorLog = [];
         return new Promise(async (resolve, reject) => {
-            
+            let err = [];
             for(let block of self.chain) {
                 if(!(block.height === 0)){
                     let currentBlock = this.chain[block.height];
                     let previousBlock = this.chain[block.height-1];
                     var previousBlockHash = SHA256(JSON.stringify(previousBlock));
-                    
-                    let err = [];
+                                        
                     if(!(previousBlockHash === currentBlock.previousBlockHash)) {
                         err.push(`Hash ${currentBlock.hash} located at Height ${currentBlock.height} has been tampered with.`);
                     }

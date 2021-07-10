@@ -57,6 +57,17 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "ValidateChain",
+			"request": {
+				"url": "localhost:8000/validate",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
