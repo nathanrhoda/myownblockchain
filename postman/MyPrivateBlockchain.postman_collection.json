@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"address\": \"n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4\",\n\t\"signature\": \"IP+Huw56rRCioHK+5cThJjEHoXPo1oB/7MlKUfw5/o7rE4gdKFst3hr+eXSY/2NuNmynv4AemBuIPIKUkIB5Pxo=\",\n\t\"message\": \"<n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4>:1625914641:starRegistry\",\n\t\"star\": {\n\t\t\"dec\": \"68' 52' 56.9\",\n\t\t\"rn\": \"15h 29m 1.8s\",\n\t\t\"story\": \"Testing the story 4\"\n\t}\n}"
+					"raw": "{\n\t\"address\": \"n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4\",\n\t\"signature\": \"IDQWx8B7PAdSoG6aQWbNTHC/CQT6cYtwsFKd078uinQCIieIzZFzZNEXh6PHNZ+aoD7HXNZsHSFgdw/RBFbogF8=\",\n\t\"message\": \"<n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4>:1626008861:starRegistry\",\n\t\"star\": {\n\t\t\"dec\": \"68' 52' 56.9\",\n\t\t\"rn\": \"15h 29m 1.8s\",\n\t\t\"story\": \"Testing the story 4\"\n\t}\n}"
 				},
 				"description": ""
 			},
