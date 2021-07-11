@@ -193,8 +193,8 @@ class Blockchain {
             let stars = []
 
             for(let block of blockArray){
-                let decodedStar = hex2ascii(block.body);
-                stars.push(decodedStar);
+                let star = block.body;
+                stars.push(star);
             }
 
             if(blockArray){

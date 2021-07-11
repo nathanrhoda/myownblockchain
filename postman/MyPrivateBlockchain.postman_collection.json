@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"address\": \"n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4\",\n\t\"signature\": \"IDQWx8B7PAdSoG6aQWbNTHC/CQT6cYtwsFKd078uinQCIieIzZFzZNEXh6PHNZ+aoD7HXNZsHSFgdw/RBFbogF8=\",\n\t\"message\": \"<n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4>:1626008861:starRegistry\",\n\t\"star\": {\n\t\t\"dec\": \"68' 52' 56.9\",\n\t\t\"rn\": \"15h 29m 1.8s\",\n\t\t\"story\": \"Testing the story 4\"\n\t}\n}"
+					"raw": "{\n\t\"address\": \"n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4\",\n\t\"signature\": \"IB8ttDYnL7+8j0a0AgtXyWRrlibRpnI1jXTE3oG4RTv5Go771xjLz5+xJlg55TXUA8pxAy7jUxgrkA9u+kOGz7c=\",\n\t\"message\": \"<n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4>:1626021628:starRegistry\",\n\t\"star\": {\n\t\t\"dec\": \"67' 52' 56.9\",\n\t\t\"rn\": \"13h 29m 1.8s\",\n\t\t\"story\": \"Testing the story 3\"\n\t}\n}"
 				},
 				"description": ""
 			},
@@ -48,7 +48,7 @@
 			"response": []
 		},
 		{
-			"name": "GetBlockByHieght",
+			"name": "GetBlockByHeight",
 			"request": {
 				"url": "http://localhost:8000/block/height/0",
 				"method": "GET",
@@ -62,6 +62,17 @@
 			"name": "ValidateChain",
 			"request": {
 				"url": "localhost:8000/validate",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetStarsByWalletAddress",
+			"request": {
+				"url": "localhost:8000/blocks/n32iDv8pYehc8YPY6zgSjmwi9XDdxhCng4",
 				"method": "GET",
 				"header": [],
 				"body": {},
