@@ -43,15 +43,15 @@ class Block {
                                             
             // Recalculate the hash of the Block            
             let calculatedHash = SHA256(JSON.stringify(self)).toString();    
-
+            
             // Comparing if the hashes changed
             if( !(hash === calculatedHash)) {            
                 // Returning the Block is not valid
-                return resolve('the Block is not valid');
+                return resolve(false);
              }
         
             // Returning the Block is valid
-            return resolve('the Block is valid');
+            return resolve(true);   
         });
     }
 

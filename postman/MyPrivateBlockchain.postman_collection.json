@@ -50,7 +50,7 @@
 		{
 			"name": "GetBlockByHieght",
 			"request": {
-				"url": "http://localhost:8000/block/height/1",
+				"url": "http://localhost:8000/block/height/0",
 				"method": "GET",
 				"header": [],
 				"body": {},
