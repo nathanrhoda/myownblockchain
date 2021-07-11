@@ -169,7 +169,7 @@ class Blockchain {
     getBlockByHeight(height) {
         let self = this;
         return new Promise((resolve, reject) => {
-            let block = self.chain.filter(p => p.height === height)[0];
+            let block = self.chain.fimd(p => p.height === height);
             if(block){
                 resolve(block);
             } else {
