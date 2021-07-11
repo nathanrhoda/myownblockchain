@@ -77,11 +77,11 @@ class Blockchain {
                 this.chain.push(block);
                 this.height = this.chain.length;
                
-                let isValid = await self.validateChain();
-                if(isValid) {
-                    resolve(block);   
-                } else {
+                let validationErrors = await self.validateChain();
+                if(validationErrors.length > 0) {
                     throw new Error(block);
+                } else {
+                    resolve(block);   
                 }               
             } catch (error) {
                 reject(error);
@@ -193,10 +193,9 @@ class Blockchain {
             let stars = []
 
             for(let block of blockArray){
-                let decodedStar = new Buffer(block.star, 'hex');
+                let decodedStar = hex2ascii(block.body);
                 stars.push(decodedStar);
             }
-
 
             if(blockArray){
                 resolve(stars);
